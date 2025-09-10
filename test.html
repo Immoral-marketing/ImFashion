@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImFashion - Growth Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-white overflow-visible">
+<script src="components/menu-component.js"></script>
+<menu-component></menu-component>
+
+    
+    <!-- start Section modal user data form -->
+    <section id="user-data-modal" class="fixed inset-0 bg-zinc-900 bg-opacity-100 flex flex-col items-center justify-center z-50 px-4 py-8 hidden backdrop-blur-sm">
+      <!-- Background image -->
+      <div class="absolute inset-0 w-full h-full">
+        <img class="w-full h-full object-cover blur-[20.40px] scale-110 opacity-45" src="images/bgampli-big.jpg" alt="Background" />
+      </div>
+      
+      <!-- Content container -->
+      <div class="relative z-10 max-w-2xl mx-auto text-center space-y-8">
+        <!-- Form title -->
+        <header>
+          <h1 class="text-white text-2xl xl:text-2xl font-extrabold font-['Inter'] uppercase leading-tight">
+            Completa tus datos <br> para ver tu resultado
+          </h1>
+        </header>
+        
+        <!-- User data form -->
+        <form id="user-data-form" class="space-y-6 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8">
+          <!-- Primera fila -->
+          <div class="flex flex-col gap-4 md:flex-row md:gap-6">
+            <input type="text" id="user-nombre" name="nombre" placeholder="Nombre" required class="w-full h-12 p-4 rounded-lg border border-gray-300 text-base font-normal font-['Inter'] leading-tight placeholder-gray-400 focus:outline-none focus:border-[#D4B996] focus:ring-2 focus:ring-[#D4B996] focus:ring-opacity-50">
+            <input type="text" id="user-apellido" name="apellido" placeholder="Apellido" required class="w-full h-12 p-4 rounded-lg border border-gray-300 text-base font-normal font-['Inter'] leading-tight placeholder-gray-400 focus:outline-none focus:border-[#D4B996] focus:ring-2 focus:ring-[#D4B996] focus:ring-opacity-50">
+          </div>
+          
+          <!-- Segunda fila -->
+          <div class="flex flex-col gap-4 md:flex-row md:gap-6">
+            <input type="text" id="user-marca" name="marca" placeholder="Nombre de tu marca" required class="w-full h-12 p-4 rounded-lg border border-gray-300 text-base font-normal font-['Inter'] leading-tight placeholder-gray-400 focus:outline-none focus:border-[#D4B996] focus:ring-2 focus:ring-[#D4B996] focus:ring-opacity-50">
+            <input type="email" id="user-email" name="email" placeholder="Email" required class="w-full h-12 p-4 rounded-lg border border-gray-300 text-base font-normal font-['Inter'] leading-tight placeholder-gray-400 focus:outline-none focus:border-[#D4B996] focus:ring-2 focus:ring-[#D4B996] focus:ring-opacity-50">
+          </div>
+          
+          <!-- Botón enviar -->
+          <div class="text-center pt-4">
+            <button type="submit" id="user-data-submit" class="text-[#D4B996] text-xl font-light font-['Inter'] underline uppercase leading-7 hover:text-white transition-colors duration-300">
+              Ver mi resultado
+            </button>
+          </div>
+          
+          <!-- Mensaje de estado -->
+          <div id="user-data-mensaje" class="text-center hidden">
+            <p id="user-data-texto" class="text-sm font-normal font-['Inter']"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- end Section modal user data form -->
+
+    <!-- start Section modal result -->
+    <section id="test-result-modal" class="fixed inset-0 bg-zinc-900 bg-opacity-100 flex flex-col items-center justify-center z-50 px-4 py-8 hidden backdrop-blur-sm">
+      <!-- Background image -->
+      <div class="absolute inset-0 w-full h-full">
+        <img class="w-full h-full object-cover blur-[20.40px] scale-110 opacity-45" src="images/bgampli-big.jpg" alt="Background" />
+      </div>
+      
+      <!-- Content container -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 xl:space-y-12">
+        <!-- Result title -->
+        <header>
+          <h1 class="text-white text-2xl xl:text-4xl font-extrabold font-['Inter'] uppercase leading-tight">
+            Resultado
+          </h1>
+        </header>
+        
+        <!-- Level title -->
+        <div class="space-y-2">
+        <h2 class="text-[#D4B996] text-3xl xl:text-6xl font-black font-['Inter'] leading-tight">
+            Nivel 2:
+          </h2>
+          <h3 class="text-[#D4B996] text-3xl xl:text-6xl font-black font-['Inter'] leading-tight">
+            Immoral Growth Engine Core
+          </h3>
+        </div>
+        
+        <!-- Description -->
+        <p class="text-white text-lg xl:text-3xl font-extralight font-['Inter'] leading-relaxed max-w-3xl mx-auto">
+          Has crecido, pero necesitas dirección. Lo que antes funcionaba ya no basta.
+        </p>
+        
+        <!-- Call to action -->
+        <div class="pt-4">
+          <a href="#" class="inline-block text-[#D4B996] text-xl xl:text-4xl font-light font-['Inter'] underline uppercase leading-relaxed hover:text-red-200 transition-colors duration-300">
+            Quiero escalar con sistema
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end Section modal result -->
+
+
+    <!-- Test Section -->
+<section class="min-h-screen bg-black flex flex-col">
+  <!-- Hero Section -->
+  <div class="bg-white flex-1 flex flex-col justify-center items-center px-4 py-24">
+    <div class="max-w-4xl mx-auto text-center mt-10">
+      <h1 class="text-4xl xl:text-6xl font-light font-['Inter'] uppercase leading-tight mb-8">
+        <span class="text-red-900">¿En qué punto está tu </span>
+        <span class="text-black">marca</span>
+        <span class="text-red-900">?</span>
+      </h1>
+      <p class="text-xl xl:text-2xl font-extralight font-['Inter'] leading-relaxed mb-6 max-w-2xl mx-auto">
+        Descubre en menos de 1 minuto en qué punto está tu marca y cómo podemos ayudarte
+      </p>
+    </div>
+  </div>
+
+  <!-- Test Questions Section -->
+  <div class="bg-white flex-1 py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <form id="test-form" class="space-y-16">
+        
+        <!-- Question 1 -->
+        <div class="space-y-6">
+          <div class="text-center">
+            <h2 class="text-xl xl:text-2xl font-black font-['Inter'] leading-snug mb-4">1. Tu crecimiento actual</h2>
+            <p class="text-lg xl:text-2xl font-light font-['Inter'] leading-7">¿Cómo describirías tu situación de crecimiento en los últimos 3 meses?</p>
+          </div>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question1" value="option1" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Estamos creciendo a buen ritmo. Todo parece "fácil".</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question1" value="option2" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Empezamos a notar que cuesta más crecer, pero seguimos en positivo.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question1" value="option3" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Nos hemos estancado o estamos bajando.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question1" value="option4" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Tenemos un crecimiento sostenido y controlado. No dependemos solo de ads.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Separator -->
+        <hr class="border-black border-t">
+
+        <!-- Question 2 -->
+        <div class="space-y-6">
+          <div class="text-center">
+            <h2 class="text-xl xl:text-2xl font-black font-['Inter'] leading-snug mb-4">2. Tus campañas y adquisición</h2>
+            <p class="text-lg xl:text-2xl font-light font-['Inter'] leading-7">¿Qué pasa cuando lanzas una campaña de paid media?</p>
+          </div>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question2" value="option1" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">ROAS alto, CPA bajo. No optimizamos mucho, pero funciona.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question2" value="option2" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Necesitamos promos y creatividad nueva cada semana para mantener ventas.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question2" value="option3" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Cada vez cuesta más. Ya no vemos resultados, aunque invertimos igual o más.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question2" value="option4" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Escala bien, pero es solo una parte del sistema. También vendemos sin ads.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Separator -->
+        <hr class="border-black border-t">
+
+        <!-- Question 3 -->
+        <div class="space-y-6">
+          <div class="text-center">
+            <h2 class="text-xl xl:text-2xl font-black font-['Inter'] leading-snug mb-4">3. Tu equipo y estructura</h2>
+            <p class="text-lg xl:text-2xl font-light font-['Inter'] leading-7">¿Cómo describirías tu equipo actual?</p>
+          </div>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question3" value="option1" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Somos pocos. Hacemos de todo.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question3" value="option2" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Hemos sumado freelancers o perfiles clave, pero aún falta dirección.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question3" value="option3" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Somos varios, pero hay desgaste, caos o falta de foco.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question3" value="option4" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Roles claros, procesos definidos, equipo profesional y alineado.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Separator -->
+        <hr class="border-black border-t">
+
+        <!-- Question 4 -->
+        <div class="space-y-6">
+          <div class="text-center">
+            <h2 class="text-xl xl:text-2xl font-black font-['Inter'] leading-snug mb-4">4. Tus métricas y control</h2>
+            <p class="text-lg xl:text-2xl font-light font-['Inter'] leading-7">¿Qué tan claro tienes tus métricas clave (LTV, CAC, márgenes)?</p>
+          </div>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question4" value="option1" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Solo vemos ROAS, seguidores e ingresos.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question4" value="option2" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Empezamos a medir más cosas, pero aún es parcial.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question4" value="option3" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Tenemos data, pero nadie sabe bien qué hacer con ella.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question4" value="option4" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Lo tenemos controlado. Medimos lo que importa y actuamos en consecuencia.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Separator -->
+        <hr class="border-black border-t">
+
+        <!-- Question 5 -->
+        <div class="space-y-6">
+          <div class="text-center">
+            <h2 class="text-xl xl:text-2xl font-black font-['Inter'] leading-snug mb-4">5. Tus canales de venta y tráfico</h2>
+            <p class="text-lg xl:text-2xl font-light font-['Inter'] leading-7">¿Qué pasaría si apagas los anuncios una semana?</p>
+          </div>
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question5" value="option1" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Las ventas caerían a cero.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question5" value="option2" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Bajarían mucho, pero algo entra por orgánico o email.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question5" value="option3" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Lo hemos hecho. Y dolió.</span>
+            </label>
+            <label class="flex items-start space-x-3 p-4 border border-red-300 rounded-lg hover:bg-red-50 cursor-pointer transition-colors">
+              <input type="checkbox" name="question5" value="option4" class="mt-1 h-5 w-5 text-red-600 border-red-300 rounded focus:ring-red-500">
+              <span class="text-sm xl:text-base font-normal font-['Inter'] leading-normal">Se sostiene. Hay base sólida de tráfico orgánico, CRM y comunidad.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center pt-8">
+          <button type="submit" class="text-xl xl:text-2xl font-medium font-['Inter'] underline uppercase text-black hover:text-red-900 transition-colors px-8 py-4">
+            Ver el resultado
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Incluir el script -->
+<script src="components/modal-component.js"></script>
+
+<!-- Usar el componente -->
+<modal-component></modal-component>
+
+    <script src="scripts.js"></script>
+    <script src="test-logic.js"></script>
+    <!-- Script del widget de Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
