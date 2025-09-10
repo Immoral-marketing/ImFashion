@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImFashion - Growth Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-white overflow-visible">
+<script src="components/menu-component.js"></script>
+<menu-component></menu-component>
+
+    
+    
+    <section class="absolute w-screen xl:w-full h-screen overflow-hidden z-[1]">
+        <img src="images/bgcasos.png" alt="Hero Background" class="w-full h-screen object-cover top-0 object-right xl: object-center hidden xl:block">
+        <img src="images/bgcasos.png" alt="Hero Background" class="w-full h-screen object-cover top-0 object-right xl: object-center xl:hidden">
+    </section>
+
+    <section class="relative h-auto flex flex-col z-[2]">
+    <!-- Hero Section -->
+    <div class=" flex-1 flex flex-col justify-center items-center px-4 py-24">
+        <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-3xl xl:text-7xl font-bold font-['Inter'] leading-tight mb-8 mt-12 xl:mt-24">
+            <span class="text-black">No mostramos campañas.</span><br>
+            <span class="text-black">Mostramos impacto.</span>
+        </h1>
+        <p class="text-xl xl:text-2xl font-extralight font-['Inter'] leading-relaxed mb-12 max-w-2xl mx-auto">
+            Cada caso que mostramos está aquí por una razón: <br class="hidden xl:block">generó crecimiento, rentabilidad o transformación real.
+        </p>
+        <button class="cursor-pointer px-10 xl:w-auto h-12 xl:h-10 xl:px-7 py-10 xl:py-4 rounded-full outline outline-1 outline-offset-[-1px] outline-black inline-flex justify-center items-center hover:bg-white hover:text-black transition-colors">
+                <a onclick="openAgendaModal()" href="#" class="text-center justify-center text-black text-lg xl:text-xl font-normal font-['Inter'] leading-tight tracking-tight px-6">Quiero que mi marca sea el<br class="xl:hidden"> próximo caso de éxito</a>
+            </button>
+        </div>
+    </div>
+    </section>
+
+    <!-- Success Cases Section -->
+    <section class="relative w-full py-12 xl:py-12 z-[2]" id="casos-exito">
+        <div class="w-full px-0">
+            <!-- Section Title -->
+            <header class="text-left ml-6 mb-8">
+                <h2 class="text-black text-3xl xl:text-5xl font-light font-['Inter'] leading-tight xl:leading-10">
+                    Casos de éxito
+                </h2>
+            </header>
+            
+            <!-- Portfolio Carousel -->
+            <div class="portfolio-carousel-container relative overflow-hidden">
+                <!-- Carousel Track -->
+                <div class="portfolio-carousel-track flex gap-0 xl:gap-0" 
+                     style="transform: translateX(0px);">
+                    
+                    <!-- Case Study Card: AMLUL -->
+                    <a href="caso-amlul.html"><article class="portfolio-card flex-shrink-0 w-80 xl:w-[600px] bg-amber-800 group cursor-pointer">
+                        <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-80 xl:h-96">
+                            <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 src="images/port-amlul.png" 
+                                 alt="Caso de éxito AMLUL - Transformación digital de marca de moda" 
+                                 loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-white text-4xl xl:text-5xl font-bold font-['Inter'] leading-tight [text-shadow:_0px_0px_20px_rgb(0_0_0_/_0.8)]">
+                                        AMLUL
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article></a>
+                    
+                    <!-- Case Study Card: bobo -->
+                    <a href="caso-bobo.html"><article class="portfolio-card flex-shrink-0 w-80 xl:w-[600px] bg-amber-800 group cursor-pointer">
+                        <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-80 xl:h-96">
+                            <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 src="images/port-bobo.png" 
+                                 alt="Caso de éxito AMLUL - Transformación digital de marca de moda" 
+                                 loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-white text-4xl xl:text-5xl font-bold font-['Inter'] leading-tight [text-shadow:_0px_0px_20px_rgb(0_0_0_/_0.8)]">
+                                        BOBO CHOSES
+                                    </h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </article></a>
+
+                    <!-- Case Study Card: Black Island -->
+                    <a href="#"><article class="portfolio-card flex-shrink-0 w-80 xl:w-[600px] bg-amber-800 group cursor-pointer">
+                        <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-80 xl:h-96">
+                            <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 src="images/port-manso.jpg" 
+                                 alt="Caso de éxito AMLUL - Transformación digital de marca de moda" 
+                                 loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-white text-4xl xl:text-5xl font-bold font-['Inter'] leading-tight [text-shadow:_0px_0px_20px_rgb(0_0_0_/_0.8)]">
+                                        LA MANSO
+                                    </h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </article></a>
+
+                    <!-- Case Study Card: la marca well -->
+                    <a href="#"><article class="portfolio-card flex-shrink-0 w-80 xl:w-[600px] bg-amber-800 group cursor-pointer">
+                        <div class="relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-80 xl:h-96">
+                            <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                                 src="images/port-well3.jpg" 
+                                 alt="Caso de éxito AMLUL - Transformación digital de marca de moda" 
+                                 loading="lazy" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-white text-4xl xl:text-5xl font-bold font-['Inter'] leading-tight [text-shadow:_0px_0px_20px_rgb(0_0_0_/_0.8)]">
+                                        LA MARCA WELL
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article></a>
+                    
+                    
+                    
+                </div>
+                
+
+                
+                <!-- Scroll Indicator (Mobile) -->
+                <div class="flex justify-center mt-4">
+                    <p class="text-black/70 text-sm font-light flex items-center gap-2">
+                        <svg class="w-4 h-4 -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l4-4 4 4m0-8l-4-4-4 4"></path>
+                        </svg>
+                        Desliza para ver más casos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+   <section class="w-full bg-white py-12 xl:py-24">
+        <div class="max-w-[1600px] mx-auto px-8 xl:px-16">
+            <div class="flex items-center flex-col xl:flex-row xl:h-96 h-[800px]">
+                <div class="w-full xl:w-[40%]">
+                    <h2 class="hidden xl:block text-black text-center xl:text-left text-3xl xl:text-5xl font-normal leading-10 mb-8">
+                        Lo que más valoran no <br class="hidden xl:block">
+                        es solo lo que hacemos, <br class="hidden xl:block">
+                        <span class="text-red-900">es cómo lo hacemos</span>
+                    </h2>
+
+                    <h2 class="xl:hidden text-black text-center xl:text-left text-3xl xl:text-5xl font-bold leading-10 mb-8">
+                        Testimonios que reflejan nuestra forma de hacer las cosas
+                    </h2>
+                </div>
+                
+                <div class="w-full xl:w-[60%] relative h-full">
+                    
+                    <!-- Mobile Navigation Buttons -->
+                    <button id="testimonials-prev" class="xl:hidden absolute -left-8 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button id="testimonials-next" class="xl:hidden absolute -right-8 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Testimonials Carousel -->
+                    <div id="testimonials-carousel" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[100%] xl:max-w-[100%] overflow-hidden cursor-grab w-full h-full">
+                        <div class="testimonials-track flex transition-transform duration-300 ease-out" style="transform: translateX(0px);">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-slide flex-shrink-0">
+                            <blockquote class="text-red-900 text-2xl xl:text-4xl font-medium leading-6 xl:leading-10 mb-8">
+                                No es fácil encontrar un equipo externo tan comprometido, proactivo y resolutivo.
+                            </blockquote>
+                            
+                            <p class="text-black text-base font-medium leading-snug mb-8">
+                                Su continua aportación, sus conocimientos, su experiencia y sus ganas por hacer que la marca crezca les han convertido en partners fundamentales para el crecimiento de negocio online, la estrategia de marketing digital y nuestra inversión en medios publicitarios.
+                            </p>
+                            
+                            <div class="flex items-center mb-4">
+                                <div class="flex space-x-1">
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-10 items-center justify-center flex mr-4">
+                                    <img src="images/bobo-logo.svg" alt="logo de Bobo Choses">
+                                </div>
+                                <div>
+                                    <p class="text-black text-sm font-black">AINARA SIMÓN</p>
+                                    <p class="text-black text-xs font-medium">Chief Digital Manager, Bobo Choses</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-slide flex-shrink-0 w-[40%]">
+                            <blockquote class="text-red-900 text-2xl xl:text-4xl font-medium leading-6 xl:leading-10 mb-8">
+                                Trabajar con este equipo ha sido una experiencia transformadora para nuestra marca.
+                            </blockquote>
+                            
+                            <p class="text-black text-base font-medium leading-snug mb-8">
+                                Su enfoque estratégico y su capacidad de ejecución nos han permitido alcanzar objetivos que parecían imposibles. La comunicación constante y su dedicación hacen que se sientan como parte de nuestro equipo interno.
+                            </p>
+                            
+                            <div class="flex items-center mb-4">
+                                <div class="flex space-x-1">
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-10 items-center justify-center flex mr-4">
+                                    <img src="images/angela-logo.svg" alt="logo de Angela">
+                                </div>
+                                <div>
+                                    <p class="text-black text-sm font-black">MARÍA GARCÍA</p>
+                                    <p class="text-black text-xs font-medium">Marketing Director, Angela</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-slide flex-shrink-0 w-[40%]">
+                            <blockquote class="text-red-900 text-2xl xl:text-4xl font-medium leading-6 xl:leading-10 mb-8">
+                                La profesionalidad y creatividad de este equipo superó todas nuestras expectativas.
+                            </blockquote>
+                            
+                            <p class="text-black text-base font-medium leading-snug mb-8">
+                                Desde el primer día demostraron un entendimiento profundo de nuestro sector y necesidades. Los resultados hablan por sí solos: incremento en ventas, mejor posicionamiento de marca y una estrategia digital sólida.
+                            </p>
+                            
+                            <div class="flex items-center mb-4">
+                                <div class="flex space-x-1">
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.04894 0.927049C8.3483 0.00573802 9.6517 0.00574017 9.95106 0.927051L11.2451 4.90983C11.379 5.32185 11.763 5.60081 12.1962 5.60081H16.3839C17.3527 5.60081 17.7554 6.84043 16.9717 7.40983L13.5838 9.87132C13.2333 10.126 13.0866 10.5773 13.2205 10.9894L14.5146 14.9721C14.8139 15.8934 13.7595 16.6596 12.9757 16.0902L9.58778 13.6287C9.2373 13.374 8.7627 13.374 8.41221 13.6287L5.02426 16.0902C4.24054 16.6596 3.18607 15.8934 3.48542 14.9721L4.7795 10.9894C4.91338 10.5773 4.76672 10.126 4.41623 9.87132L1.02827 7.40983C0.244561 6.84043 0.647338 5.60081 1.61606 5.60081H5.8038C6.23703 5.60081 6.62099 5.32185 6.75486 4.90983L8.04894 0.927049Z" fill="#D4B996"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-10 items-center justify-center flex mr-4">
+                                    <img src="images/la-manso-logo.svg" alt="logo de La Manso">
+                                </div>
+                                <div>
+                                    <p class="text-black text-sm font-black">CARLOS RODRÍGUEZ</p>
+                                    <p class="text-black text-xs font-medium">CEO, La Manso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script src="components/footer-component.js"></script>
+<footer-component></footer-component>
+    <!-- Floating Test Button Component -->
+    <floating-test-button></floating-test-button>
+    
+
+<!-- Incluir el script -->
+<script src="components/modal-component.js"></script>
+
+<!-- Usar el componente -->
+<modal-component></modal-component>
+
+    <script src="scripts.js"></script>
+    <!-- Script del widget de Calendly -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
